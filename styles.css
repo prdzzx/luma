@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #bf0a00; /* Fundo vermelho #bf0a00 */
+    font-family: 'Belanosima', sans-serif; /* Usando a fonte Belanosima */
+    color: white; /* Texto branco */
+}
+
+#content {
+    position: relative;
+    height: 100vh; /* Define a altura da tela */
+    padding: 20px; /* Adiciona um pequeno preenchimento */
+    display: flex; /* Usando display flex para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Alinha os elementos em coluna */
+}
+
+.title {
+    font-size: 3em; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; /* Centraliza o texto */
+}
+
+.subtitle {
+    font-size: 2em; /* Tamanho do subtítulo */
+    margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+}
+
+.text {
+    max-width: 800px; /* Define a largura máxima do texto */
+    text-align: justify; /* Justifica o texto */
+    position: relative; /* Define o contexto de empilhamento para o texto */
+    z-index: 2; /* Garante que o texto fique na frente dos corações */
+}
+
+.text p {
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+}
+
+/* Estilos para os corações */
+.heart {
+    position: absolute;
+    width: 65px; /* Largura dos corações */
+    height: 65px; /* Altura dos corações */
+    font-size: 65px; /* Tamanho do emoji */
+    animation: fall 5s linear infinite; /* Animação de queda */
+    z-index: 1; /* Garante que os corações fiquem atrás do texto */
+}
+
+@keyframes fall {
+    0% {
+        top: -65px; /* Começa acima do topo da tela */
+        opacity: 1; /* Totalmente visível */
+    }
+    100% {
+        top: 100vh; /* Chega até o final da tela */
+        opacity: 0; /* Totalmente transparente */
+    }
+}
